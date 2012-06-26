@@ -1,0 +1,4 @@
+ob_start();
+var_dump(${1});
+$buff = ob_get_clean();
+file_put_contents('${2:/tmp/log.txt}', $buff);
