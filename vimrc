@@ -14,6 +14,9 @@ set hlsearch        " hilight searches by default
 set ttyscroll=3     " improves redraw performance when scroll
 set nocompatible   " don't be compatible with legacy vi
 
+
+let g:NERDTreeDirArrows=0
+
 if v:version >= 703
   set colorcolumn=+1 " mark the ideal max text width (vim 7.3 or greater)
 endif
@@ -41,6 +44,13 @@ highlight ColorColumn ctermbg=0
 
 let html_templates_imasd = 1
 
+map <F4> :NERDTreeToggle<CR>
+let NERDTreeShowBookmarks=1
+
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
 
 abbr fn function ()\n{\n}
 abbr ccom <!-- ====\n==== -->
