@@ -56,10 +56,7 @@ hi String		ctermfg=113		cterm=none		guifg=#95e454	gui=none
 hi Comment		ctermfg=246		cterm=none		guifg=#99968b	gui=italic
 hi Todo			ctermfg=245		cterm=none		guifg=#8f8f8f	gui=italic
 
-" colora
 
-hi User1 guifg=#ffdad8  guibg=#880c0e
-hi User2 guifg=#000000  guibg=#F4905C
 
 " Links
 hi! link FoldColumn		Folded
