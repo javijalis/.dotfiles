@@ -72,6 +72,8 @@ set statusline+=%0*\ \ %m%r%w\ %P\ \                      "Modified? Readonly? T
 " default the statusline to green when entering Vim
 hi statusline guibg=green
 
+"circulacion de tabs
+nnoremap <silent> <F5> :tabn<CR> 
 
 nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
