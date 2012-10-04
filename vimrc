@@ -14,6 +14,18 @@ set hlsearch        " hilight searches by default
 set ttyscroll=3     " improves redraw performance when scroll
 set nocompatible   " don't be compatible with legacy vi
 
+" first, enable status line always
+set laststatus=2
+
+" now set it up to change the status line based on mode
+if version >= 700
+  au InsertEnter * hi StatusLine term=reverse ctermbg=1 ctermfg=0 gui=undercurl guisp=Red
+  au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
+endif
+
+" default the statusline to green when entering Vim
+hi statusline guibg=green
+
 
 let g:NERDTreeDirArrows=0
 
@@ -68,12 +80,12 @@ set statusline+=%8*\ %=\ row:%l/%L\ (%03p%%)\             "Rownumber/total (%)
 set statusline+=%9*\ col:%03c\                            "Colnr
 set statusline+=%0*\ \ %m%r%w\ %P\ \                      "Modified? Readonly? Top/bot.
 
-
-" default the statusline to green when entering Vim
-hi statusline guibg=green
+set statusline=%<%F%h%m%r%h%w%y\ %{&ff}\ %{strftime(\"%c\",getftime(expand(\"%:p\")))}%=\ lin:%l\,%L\ col:%c%V\ pos:%o\ ascii:%b\ %P
 
 "circulacion de tabs
 nnoremap <silent> <F5> :tabn<CR> 
+"circulacion de bugers
+nnoremap <F6> :buffers<CR>:buffer<Space>
 
 nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
