@@ -13,6 +13,9 @@ set wrap
 set hlsearch        " hilight searches by default
 set ttyscroll=3     " improves redraw performance when scroll
 set nocompatible   " don't be compatible with legacy vi
+set autoindent
+set history=500
+set smartindent
 
 " first, enable status line always
 set laststatus=2
