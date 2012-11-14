@@ -16,7 +16,7 @@ set nocompatible   " don't be compatible with legacy vi
 set autoindent
 set history=500
 set smartindent
-
+set ts=3
 " first, enable status line always
 set laststatus=2
 
